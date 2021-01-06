@@ -11,21 +11,20 @@ const initState: CartRootType = {
     totalPrice: 0
 }
 
-
 export const cartReducer = (state: CartRootType = initState, action: ActionTypes): CartRootType => {
     switch (action.type) {
         case "cart/ADD_PRODUCT_TO_CART":
             return {
                 ...state,
                 cart: [...state.cart, action.product],
-                totalPrice: state.totalPrice + action.product.prise
+                totalPrice: (state.totalPrice + action.product.prise)
             }
         case "cart/DELETE_PRODUCT":
             const {prise} = state.cart.find(p => p.id === action.id) as Item
             return {
                 ...state,
                 cart: state.cart.filter(p => p.id !== action.id),
-                totalPrice: state.totalPrice - (prise)
+                totalPrice: (state.totalPrice - prise)
             }
         default:
             return state

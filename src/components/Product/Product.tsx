@@ -7,7 +7,7 @@ export const Product = ({photo, brand, id, model, prise, totalCount}: Item) => {
     return (
         <div className={s.productBlock}>
             <div className={s.photo}>
-                <img src={photo ? photo : undefined} alt="" title={'balance: ' + totalCount.toString()}/>
+                <img src={photo} alt="" title={'balance: ' + totalCount.toString()}/>
             </div>
             <div className={s.brand}>
                 <h3>

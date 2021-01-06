@@ -12,8 +12,7 @@ export type Item = {
     prise: number
     totalCount: number
     id: string
-    // null временно
-    photo: string | null
+    photo: string
 }
 export type ProductsRootType = {
     sneakers: Array<Item>
@@ -22,12 +21,12 @@ type ActionTypes = ReturnType<typeof itemInCart> | ReturnType<typeof addItem>
 
 const initState: ProductsRootType = {
     sneakers: [
-        {brand: 'Nike', model: 'ZX', id: v1(), prise: 94.99, totalCount: 1, photo: s1},
+        {brand: 'Nike', model: 'INTERNATIONALIST', id: v1(), prise: 94.99, totalCount: 1, photo: s1},
         {brand: 'Nike', model: 'ROSHE-CORTEZ', id: v1(), prise: 49.99, totalCount: 1, photo: s2},
         {brand: 'Nike', model: 'ROSHE-FLYKNIT', id: v1(), prise: 59.99, totalCount: 1, photo: s3},
         {brand: 'Nike', model: 'ROSHE-NM', id: v1(), prise: 44, totalCount: 1, photo: s4},
         {brand: 'Nike', model: 'STEFAN-JANOSKI', id: v1(), prise: 46.99, totalCount: 1, photo: s5},
-        {brand: 'Nike', model: 'TENNIS', id: v1(), prise: 77, totalCount: 1, photo: s6},
+        {brand: 'Nike', model: 'TENNIS-CLASSIC-ULTRA', id: v1(), prise: 77, totalCount: 1, photo: s6},
     ]
 }
 
