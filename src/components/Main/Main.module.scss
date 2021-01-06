@@ -3,10 +3,11 @@
 
 .container {
   background-color: $bgSecondary;
+  padding: 17vh 0;
   .mainBlock {
     @include container();
     background-color: $bgSecondary;
-    padding-top: 17vh;
+
     //border: 1px solid;
     min-height: 85vh;
     display: flex;

@@ -2,7 +2,7 @@ import React from "react"
 import s from "../Product/Product.module.scss"
 import {Item} from "../../store/productsReducer";
 
-export const Product = ({photo,brand,id,model,prise,totalCount}: Item) => {
+export const Product = ({photo, brand, id, model, prise, totalCount}: Item) => {
 
     return (
         <div className={s.productBlock}>
@@ -11,8 +11,8 @@ export const Product = ({photo,brand,id,model,prise,totalCount}: Item) => {
             </div>
             <div className={s.brand}>
                 <h3>
-                    <span>{brand} </span>
-                    <span>{model}</span>
+                    <span className={s.brandName}>{brand} </span>
+                    <span className={s.model}>{model}</span>
                 </h3>
             </div>
             <div className={s.price}>

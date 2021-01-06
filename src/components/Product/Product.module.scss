@@ -45,6 +45,16 @@
     color: $textPrimaryColor;
     font-size: 26px;
     letter-spacing: 2px;
+
+    h3 {
+      .brandName {
+        display: block;
+      }
+
+      .model {
+        font-size: 18px;
+      }
+    }
   }
 
 }

@@ -1,5 +1,4 @@
 import {v1} from "uuid"
-import forExample from "../assets/sneakers/more.svg"
 import s1 from "../assets/sneakers/INTERNATIONALIST-KJCRD-M-QS-829344_006_A_PREM_1.png"
 import s2 from "../assets/sneakers/NIKE-ROSHE-CORTEZ-NM-823299_607_A_PREM_1.png"
 import s3 from "../assets/sneakers/NIKE-ROSHE-FLYKNIT-PRM-746825_402_A_PREM_1.png"
