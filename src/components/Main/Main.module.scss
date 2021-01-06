@@ -1,14 +1,17 @@
 @import "src/common/variables";
 @import "src/common/mixins";
 
-.mainBlock {
-  @include container();
+.container {
   background-color: $bgSecondary;
-  padding-top: 7vh;
-  border: 1px solid;
-  min-height: 85vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  .mainBlock {
+    @include container();
+    background-color: $bgSecondary;
+    padding-top: 17vh;
+    //border: 1px solid;
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 }

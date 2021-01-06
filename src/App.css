@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Oswald';
+    src: local('Oswald'), url("/src/fonts/Oswald/Oswald-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 200;
+    src: local('Oswald'), url("/src/fonts/Oswald/Oswald-ExtraLight.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 700;
+    src: local('Oswald'), url("/src/fonts/Oswald/Oswald-Bold.ttf") format('truetype');
+}
+
 .App {
 
 }

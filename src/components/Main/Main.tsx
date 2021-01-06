@@ -10,8 +10,10 @@ export const Main = () => {
     const {sneakers} = useSelector<StateType, ProductsRootType>(state => state.products)
 
     return (
-        <div className={s.mainBlock}>
-            {sneakers.map(s => <Product key={s.id} {...s}/>)}
+        <div className={s.container}>
+            <div className={s.mainBlock}>
+                {sneakers.map(s => <Product key={s.id} {...s}/>)}
+            </div>
         </div>
     )
 }
