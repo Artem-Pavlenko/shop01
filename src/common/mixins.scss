@@ -16,3 +16,6 @@
   display: flex;
   flex-wrap: wrap;
 }
+@mixin marginTop () {
+  margin-top: 7vh;
+}

@@ -6,6 +6,7 @@
   height: 7vh;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 5;
   display: flex;
   justify-content: space-between;
@@ -37,5 +38,21 @@
 
   .cart {
     padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .totalPrice {
+      margin-right: 5px;
+    }
+
+    .link {
+      a {
+        text-decoration: none;
+        color: $textPrimaryColor;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+    }
   }
 }
