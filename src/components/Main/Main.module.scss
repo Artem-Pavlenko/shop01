@@ -1,6 +1,14 @@
+@import "src/common/variables";
+@import "src/common/mixins";
 
-.homeBlock {
+.mainBlock {
+  @include container();
+  background-color: $bgSecondary;
   padding-top: 7vh;
   border: 1px solid;
   min-height: 85vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }

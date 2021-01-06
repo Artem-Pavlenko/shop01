@@ -12,7 +12,7 @@ export const Header = () => {
                 <span>bingo</span>
             </div>
             <div className={s.cart}>
-
+                cart
             </div>
         </header>
     )
