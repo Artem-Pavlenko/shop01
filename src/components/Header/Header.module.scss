@@ -2,7 +2,6 @@
 
 
 .headerBlock {
-  //border: 1px solid;
   height: 7vh;
   width: 100%;
   position: fixed;
@@ -15,16 +14,19 @@
   background-color: $bgPrimary;
 
   .logo {
+    width: 33%;
     height: 100%;
     padding-left: 10px;
 
     img {
       height: 80%;
-      margin-top: 10%;
     }
   }
 
   .title {
+    text-align: center;
+    width: 33%;
+
     a {
       text-decoration: none;
 
@@ -42,9 +44,10 @@
   }
 
   .cart {
+    width: 33%;
     padding-right: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     .totalPrice {
       margin-right: 5px;
