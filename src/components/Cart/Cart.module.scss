@@ -4,11 +4,12 @@
 @mixin cartBarBlock() {
   width: 33%;
   text-align: center;
-  padding: 1em 7em;
+  padding: .5em 7em;
   font-size: 14px;
   line-height: 1.72;
   letter-spacing: 2px;
   color: $textPrimaryColor;
+  font-family: $fontFamilyPrimary;
 }
 
 @mixin clickedBlock() {
@@ -71,11 +72,13 @@
       }
 
       .cartBar {
+        position: relative;
         padding: 10px;
         margin: 50px 5px 40px;
         display: flex;
         width: 100%;
         justify-content: space-between;
+        align-items: center;
         background-color: $bgPrimary;
         box-shadow: 0 0 15px rgba(195, 195, 195, 0.6);
 
@@ -93,21 +96,23 @@
 
         .totalPrice {
           @include cartBarBlock();
+          white-space: nowrap;
 
           .totalText {
-
+            color: $gray;
+            font-size: 30px;
+            font-weight: normal !important;
+            line-height: 1.72;
+            letter-spacing: 2px;
           }
 
           .price {
-
+            font-size: 30px;
+            color: $textSecondaryColor;
+            line-height: 1.72;
+            font-weight: bolder;
           }
         }
-
-        //.checkout {
-        //  @include cartBarBlock();
-        //  @include clickedBlock();
-        //  cursor: pointer;
-        //}
       }
     }
 
@@ -131,6 +136,9 @@
         font-family: $fontFamilyPrimary;
         color: $textSecondaryColor;
         letter-spacing: 2px;
+        &:hover {
+          color: $blood;
+        }
       }
     }
   }
