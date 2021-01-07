@@ -1,10 +1,10 @@
 import React from "react"
 import s from './Cart.module.scss'
-import {useSelector} from "react-redux";
-import {StateType} from "../../store/store";
-import {CartRootType} from "../../store/cartReducer";
-import {CartItem} from "./CartItem/CartItem";
-import {NavLink} from "react-router-dom";
+import {useSelector} from "react-redux"
+import {StateType} from "../../store/store"
+import {CartRootType} from "../../store/cartReducer"
+import {CartItem} from "./CartItem/CartItem"
+import {NavLink} from "react-router-dom"
 
 export const Cart = () => {
 

@@ -2,7 +2,7 @@ import React from "react"
 import s from "./CartItem.module.scss"
 import {Item} from "../../../store/productsReducer"
 import {useDispatch} from "react-redux";
-import {removeProductFromCart} from "../../../store/cartReducer";
+import {removeProductFromCart} from "../../../store/cartReducer"
 
 
 export const CartItem = (item: Item) => {

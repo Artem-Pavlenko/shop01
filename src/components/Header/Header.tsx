@@ -1,10 +1,10 @@
 import React from "react"
 import s from "./Header.module.scss"
 import logo from "../../assets/icon/sneakers.svg"
-import {useSelector} from "react-redux";
-import {StateType} from "../../store/store";
-import {CartRootType} from "../../store/cartReducer";
-import {NavLink} from "react-router-dom";
+import {useSelector} from "react-redux"
+import {StateType} from "../../store/store"
+import {CartRootType} from "../../store/cartReducer"
+import {NavLink} from "react-router-dom"
 
 export const Header = () => {
 

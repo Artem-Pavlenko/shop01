@@ -1,6 +1,44 @@
 @import "src/common/mixins";
+@import "src/common/variables";
 
 .aboutBlock {
   @include marginTop();
-  min-height: 80vh;
+  //min-height: 80vh;
+  text-align: center;
+  min-height: 100%;
+  position: relative;
+  padding-top: 85px;
+
+  .description {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    //transform: translateY(-50%);
+
+
+    h2 {
+      font-family: $fontFamilyPrimary;
+      font-size: 48px;
+      font-weight: bolder;
+      color: $textPrimaryColor;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+    }
+
+    div {
+      width: 60%;
+      font-family: $fontFamilySecondary;
+      color: $textPrimaryColor;
+      font-size: 15px;
+      line-height: 2.5;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+      text-align: left;
+    }
+  }
 }
