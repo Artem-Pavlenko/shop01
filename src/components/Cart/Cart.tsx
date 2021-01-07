@@ -15,14 +15,17 @@ export const Cart = () => {
             <div className={s.cartContainer}>
                 <h3>your cart</h3>
                 {cartProduct.cart.length
-                    ? <div className={s.cartList}>
-                        {cartProduct.cart.map(p => <CartItem key={p.id} {...p}/>)}
-                        <div>
+                    ? <div className={s.cartListBlock}>
+                        <div className={s.cartList}>
+                            {cartProduct.cart.map(p => <CartItem key={p.id} {...p}/>)}
+                        </div>
+                        <div className={s.cartBar}>
                             <NavLink to={'/'}>back store</NavLink>
-                            <div>
-                                <span>Total:</span>
-                                <span>{cartProduct.totalPrice}</span>
+                            <div className={s.totalPrice}>
+                                <span className={s.totalText}>Total:</span>
+                                <span className={s.price}>{' $' + cartProduct.totalPrice}</span>
                             </div>
+                            <span className={s.checkout}>checkout</span>
                         </div>
                     </div>
                     : <div className={s.empty}>

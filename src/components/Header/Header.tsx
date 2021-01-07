@@ -4,7 +4,7 @@ import logo from "../../assets/icon/sneakers.svg"
 import {useSelector} from "react-redux";
 import {StateType} from "../../store/store";
 import {CartRootType} from "../../store/cartReducer";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 export const Header = () => {
 
@@ -21,10 +21,9 @@ export const Header = () => {
                 </NavLink>
             </div>
             <div className={s.cart}>
-               <div className={s.totalPrice}>
-                   {/*{totalPrice === 0 ? '$00.00' : '$' + totalPrice}*/}
-                   {'$ '+totalPrice.toFixed(2)}
-               </div>
+                <div className={s.totalPrice}>
+                    {'$ ' + totalPrice.toFixed(2)}
+                </div>
                 <div className={s.link}>
                     <NavLink to={'/cart'}>cart</NavLink>
                 </div>
