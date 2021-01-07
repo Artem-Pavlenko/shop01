@@ -25,14 +25,19 @@
   }
 
   .title {
-    h2 {
-      color: $textPrimaryColor;
-      font-size: 34px;
-      line-height: normal;
-      text-transform: uppercase;
-      font-weight: bolder;
-      letter-spacing: 15px;
-      font-family: $fontFamilyPrimary;
+    a {
+      text-decoration: none;
+
+      h2 {
+        text-decoration: none;
+        color: $textPrimaryColor;
+        font-size: 34px;
+        line-height: normal;
+        text-transform: uppercase;
+        font-weight: bolder;
+        letter-spacing: 15px;
+        font-family: $fontFamilyPrimary;
+      }
     }
   }
 

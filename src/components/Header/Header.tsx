@@ -16,7 +16,9 @@ export const Header = () => {
                 <NavLink to={'/about'}><img src={logo} alt=' '/></NavLink>
             </div>
             <div className={s.title}>
-                <h2>bingo</h2>
+                <NavLink to={'/'}>
+                    <h2>bingo</h2>
+                </NavLink>
             </div>
             <div className={s.cart}>
                <div className={s.totalPrice}>

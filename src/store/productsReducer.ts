@@ -17,7 +17,7 @@ export type Item = {
 export type ProductsRootType = {
     sneakers: Array<Item>
 }
-type ActionTypes = ReturnType<typeof itemInCart> | ReturnType<typeof addItem>
+type ActionTypes = ReturnType<typeof itemInCart> | ReturnType<typeof addProduct>
 
 const initState: ProductsRootType = {
     sneakers: [
@@ -42,7 +42,7 @@ export const productsReducer = (state: ProductsRootType = initState, action: Act
         case "product/ADD_ITEM":
             return {
                 ...state,
-                sneakers: [...state.sneakers, action.item]
+                sneakers: [...state.sneakers, action.product]
             }
         default:
             return state
@@ -52,4 +52,4 @@ export const productsReducer = (state: ProductsRootType = initState, action: Act
 // если единица товара попадёт в корзину, то её нужно убрать из списка
 export const itemInCart = (id: string) => ({type: 'product/ITEM_IN_CART', id} as const)
 // если пользователь удалит товар из корзины, то вернётся обратно в список
-export const addItem = (item: Item) => ({type: 'product/ADD_ITEM', item} as const)
+export const addProduct = (product: Item) => ({type: 'product/ADD_ITEM', product} as const)
