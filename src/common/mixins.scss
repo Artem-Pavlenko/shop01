@@ -1,21 +1,27 @@
-
-@mixin imgCenter () {
+@mixin imgCenter() {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-@mixin flexCenter () {
+
+@mixin flexCenter() {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@mixin container () {
+
+@mixin container() {
   height: 100%;
   width: 95%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
-@mixin marginTop () {
+
+@mixin marginTop() {
   margin-top: 7vh;
+}
+
+@mixin boxShadow() {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }

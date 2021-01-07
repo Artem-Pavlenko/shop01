@@ -22,7 +22,8 @@ export const Header = () => {
             </div>
             <div className={s.cart}>
                <div className={s.totalPrice}>
-                   {totalPrice === 0 ? '$00.00' : '$' + totalPrice}
+                   {/*{totalPrice === 0 ? '$00.00' : '$' + totalPrice}*/}
+                   {'$ '+totalPrice.toFixed(2)}
                </div>
                 <div className={s.link}>
                     <NavLink to={'/cart'}>cart</NavLink>

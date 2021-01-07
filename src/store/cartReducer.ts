@@ -1,11 +1,11 @@
-import {Item, itemInCart} from "./productsReducer";
+import {addProduct, Item, itemInCart} from "./productsReducer";
 import {Dispatch} from "redux";
 
 export type CartRootType = {
     cart: Array<Item>
     totalPrice: number
 }
-type ActionTypes = ReturnType<typeof addProductToCart> | ReturnType<typeof deleteProductFromCart>
+type ActionTypes = ReturnType<typeof addProductToCart> | ReturnType<typeof deleteProduct>
 
 const initState: CartRootType = {
     cart: [],
@@ -18,7 +18,7 @@ export const cartReducer = (state: CartRootType = initState, action: ActionTypes
             return {
                 ...state,
                 cart: [...state.cart, action.product],
-                totalPrice: (state.totalPrice + action.product.prise)
+                totalPrice: +(state.totalPrice + action.product.prise).toFixed(2)
             }
         case "cart/DELETE_PRODUCT":
             const {prise} = state.cart.find(p => p.id === action.id) as Item
@@ -33,9 +33,14 @@ export const cartReducer = (state: CartRootType = initState, action: ActionTypes
 }
 
 export const addProductToCart = (product: Item) => ({type: 'cart/ADD_PRODUCT_TO_CART', product} as const)
-export const deleteProductFromCart = (id: string) => ({type: 'cart/DELETE_PRODUCT', id} as const)
+export const deleteProduct = (id: string) => ({type: 'cart/DELETE_PRODUCT', id} as const)
 
 export const productToCart = (product: Item) => (dispatch: Dispatch) => {
     dispatch(addProductToCart(product))
     dispatch(itemInCart(product.id))
+}
+
+export const removeProductFromCart = (product: Item) => (dispatch: Dispatch) => {
+    dispatch(deleteProduct(product.id))
+    dispatch(addProduct(product))
 }
